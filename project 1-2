@@ -1,0 +1,13 @@
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+import time
+
+driver=webdriver.Chrome("C:\\Users\OCAC\PycharmProjects\PythonProject\drivers\chromedriver.exe")
+driver.get("http://facebook.com")
+driver.maximize_window()
+driver.find_element_by_name('email').send_keys("7684998887")
+driver.find_element_by_name('pass').send_keys("kumar1")
+driver.find_element_by_name('login').send_keys(Keys.ENTER)
+time.sleep(100)
+driver.quit()
+print("My project did loggeg in the facebook successfully")

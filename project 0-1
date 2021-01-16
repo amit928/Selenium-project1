@@ -1,0 +1,13 @@
+from selenium import webdriver
+import time
+from selenium.webdriver.common.keys import Keys
+driver=webdriver.Chrome(r"C:\Users\OCAC\PycharmProjects\PythonProject\drivers\chromedriver.exe")
+
+driver.get("http://google.com")
+driver.find_element_by_name("q").send_keys("test")
+driver.find_element_by_name("btnK").send_keys(Keys.ENTER)
+driver.maximize_window()
+
+time.sleep(4)
+driver.quit()
+print("Selenium test completed succesfully .")
